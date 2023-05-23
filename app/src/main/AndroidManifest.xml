@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meghna.exoplayer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.meghna.exoplayer.ui.BasicAudioPlayerWithHLSMediaSource"
+            android:exported="false" />
+        <activity
+            android:name="com.meghna.exoplayer.ui.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.meghna.exoplayer.ui.BasicAudioPlayer" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicVideoPlayerWithDashMediaSource" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicMediaPlayerWithPlaylist" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicAudioPlayerWithListener" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicAudioPlayerWithProgressiveMediaSource" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicVideoPlayerWithSmoothStreaming" />
+        <activity android:name="com.meghna.exoplayer.ui.BasicAudioPlayerWithNotification" />
+
+        <service android:name="com.meghna.exoplayer.util.AudioPlayerService" />
+    </application>
+
+</manifest>
